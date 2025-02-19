@@ -35,6 +35,7 @@ Desenvolvimento de microserviço FluxoCaixa.
 ## Tecnologias
 
 - .net 9
+- Scalar openAPI
 - Gerenciador de pacotes nuget
 - MySql 
 - Mongodb
@@ -67,7 +68,7 @@ Após concluído, acesse o swagger pelo seu navegador. <br>
 
 Documentação da API REST (em desenvolvimento): <br>
 
-http://localhost:5001/swagger
+http://localhost:5001/scalar/v1
 
 
 Endpoints:

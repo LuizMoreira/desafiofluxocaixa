@@ -1,0 +1,116 @@
+services:
+  fluxocaixaconsolidadodb:
+    container_name: fluxocaixaconsolidadodb
+    hostname: "fluxocaixaconsolidadodb"
+    labels:
+      NAME: "fluxocaixaconsolidadodb"
+    restart: always
+    ports:
+        - "27017:27017"
+    expose:
+        - 27017        
+    networks: 
+        - app-networks        
+    volumes:
+        - mongo_data:/data/db
+
+  rabbitmq:
+    container_name: rabbitmq
+    hostname: "rabbitmq"
+    labels:
+      NAME: "rabbitmq"
+    restart: always
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    networks: 
+        - app-networks        
+    depends_on:
+        - fluxocaixaconsolidadodb
+
+  dbmysql:
+    restart: always
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    container_name: dbmysql
+    environment:
+        MYSQL_DATABASE: 'dbmysql'
+        MYSQL_USER: 'inmetrics'
+        MYSQL_PASSWORD: 'pws1234'
+        MYSQL_ROOT_PASSWORD: 'pws1234'
+    tty: true
+    ports:
+      - 3306:3306
+    expose:
+        - 3306
+    networks: 
+        - app-networks               
+    volumes:
+        - dbmysql_data:/var/lib/mysql
+
+
+#   dbpostgres:
+#     container_name: dbpostgres
+#     restart: always
+#     environment:
+#       POSTGRES_DB: dbpostgres
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: pws1234
+#     ports:
+#       - "5432:5432"
+#     expose:
+#       - 5432
+#     networks: 
+#       - app-networks               
+#     volumes:
+#       - dbpostgres_data:/var/lib/postgresql/data
+
+  microservicofluxocaixa:
+    container_name: microservicofluxocaixa
+    labels:
+      NAME: microservicofluxocaixa
+    restart: on-failure
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+        - rabbitmq
+        - dbmysql
+        # - dbpostgres
+        - fluxocaixaconsolidadodb
+    links:
+        - dbmysql
+    ports:
+        - "5001:8080"
+    networks: 
+        - app-networks        
+    build:
+        context: .
+        dockerfile: Services/FluxoCaixa/Microservices.FluxoCaixa.API/Dockerfile
+
+#   elasticsearch:
+#     container_name: elasticsearch
+#     environment:
+#         - xpack.monitoring.enabled=true
+#         - xpack.watcher.enabled=false
+#         - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#         - discovery.type=single-node
+#     ports:
+#         - "9200:9200"
+    # networks: 
+    #     - app-networks        
+#     volumes:
+#         - elasticsearch-data:/usr/share/elasticsearch/data   
+
+#   kibana:
+#     container_name: kibana
+#     environment:        
+#         - ELASTICSEARCH_URL=http://elasticsearch:9200
+#     depends_on:
+#         - elasticsearch
+#     ports:
+#         - "5601:5601"  
+    # networks: 
+    #     - app-networks        
+
+networks: 
+    app-networks:
+        driver: bridge

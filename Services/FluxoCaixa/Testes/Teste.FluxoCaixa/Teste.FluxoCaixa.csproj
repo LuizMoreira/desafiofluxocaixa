@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.18.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="xunit" Version="2.5.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Moq" Version="4.20.69" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Microservices.FluxoCaixa.API\Microservices.FluxoCaixa.API.csproj" />
+    <ProjectReference Include="..\..\Microservices.FluxoCaixa.Application\Microservices.FluxoCaixa.Application.csproj" />
+    <ProjectReference Include="..\..\Microservices.FluxoCaixa.Core\Microservices.FluxoCaixa.Core.csproj" />
+    <ProjectReference Include="..\..\Microservices.FluxoCaixa.Infrastructure\Microservices.FluxoCaixa.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+</Project>

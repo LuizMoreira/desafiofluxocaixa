@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Services", "1-Services", "{8177E77B-DD11-4665-86C9-5E5E1842CDDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluxoCaixa", "FluxoCaixa", "{9C411202-2295-4F7B-9078-6AF20132AE8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.FluxoCaixa.API", "Services\FluxoCaixa\Microservices.FluxoCaixa.API\Microservices.FluxoCaixa.API.csproj", "{5E661F8D-FE84-4448-93D4-DEC7495B3BC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.FluxoCaixa.Application", "Services\FluxoCaixa\Microservices.FluxoCaixa.Application\Microservices.FluxoCaixa.Application.csproj", "{B7C6127E-F8AD-46A9-943F-C05EB78F5229}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.FluxoCaixa.Infrastructure", "Services\FluxoCaixa\Microservices.FluxoCaixa.Infrastructure\Microservices.FluxoCaixa.Infrastructure.csproj", "{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.FluxoCaixa.Core", "Services\FluxoCaixa\Microservices.FluxoCaixa.Core\Microservices.FluxoCaixa.Core.csproj", "{CD4163B7-8CD6-424E-8B3A-4118C987AD66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Logger", "Common\Common.Logger\Common.Logger.csproj", "{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Common", "2-Common", "{1D260ECE-654C-48CB-8372-B64D8DF1E497}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Event.Messages", "Common\Event.Messages\Event.Messages.csproj", "{84E829AA-2C45-40C1-8530-4E9529429DA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{D438A949-F09F-4F41-971A-A64D89680124}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teste.FluxoCaixa", "Services\FluxoCaixa\Testes\Teste.FluxoCaixa\Teste.FluxoCaixa.csproj", "{851CD561-E665-43C4-94C4-AE2EE42F095D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-DockerCompose", "3-DockerCompose", "{B627EBC7-7CC5-4DCA-A609-B803B281885D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E661F8D-FE84-4448-93D4-DEC7495B3BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E661F8D-FE84-4448-93D4-DEC7495B3BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E661F8D-FE84-4448-93D4-DEC7495B3BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E661F8D-FE84-4448-93D4-DEC7495B3BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C6127E-F8AD-46A9-943F-C05EB78F5229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C6127E-F8AD-46A9-943F-C05EB78F5229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C6127E-F8AD-46A9-943F-C05EB78F5229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C6127E-F8AD-46A9-943F-C05EB78F5229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4163B7-8CD6-424E-8B3A-4118C987AD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4163B7-8CD6-424E-8B3A-4118C987AD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4163B7-8CD6-424E-8B3A-4118C987AD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4163B7-8CD6-424E-8B3A-4118C987AD66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E829AA-2C45-40C1-8530-4E9529429DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E829AA-2C45-40C1-8530-4E9529429DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E829AA-2C45-40C1-8530-4E9529429DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E829AA-2C45-40C1-8530-4E9529429DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851CD561-E665-43C4-94C4-AE2EE42F095D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851CD561-E665-43C4-94C4-AE2EE42F095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851CD561-E665-43C4-94C4-AE2EE42F095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851CD561-E665-43C4-94C4-AE2EE42F095D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C411202-2295-4F7B-9078-6AF20132AE8B} = {8177E77B-DD11-4665-86C9-5E5E1842CDDD}
+		{5E661F8D-FE84-4448-93D4-DEC7495B3BC0} = {9C411202-2295-4F7B-9078-6AF20132AE8B}
+		{B7C6127E-F8AD-46A9-943F-C05EB78F5229} = {9C411202-2295-4F7B-9078-6AF20132AE8B}
+		{879C81FA-3E2F-4C7D-8858-8AD8543BC5C9} = {9C411202-2295-4F7B-9078-6AF20132AE8B}
+		{CD4163B7-8CD6-424E-8B3A-4118C987AD66} = {9C411202-2295-4F7B-9078-6AF20132AE8B}
+		{CC8F86AE-DEC9-4766-9104-A48BD5A49B1C} = {1D260ECE-654C-48CB-8372-B64D8DF1E497}
+		{84E829AA-2C45-40C1-8530-4E9529429DA9} = {1D260ECE-654C-48CB-8372-B64D8DF1E497}
+		{D438A949-F09F-4F41-971A-A64D89680124} = {9C411202-2295-4F7B-9078-6AF20132AE8B}
+		{851CD561-E665-43C4-94C4-AE2EE42F095D} = {D438A949-F09F-4F41-971A-A64D89680124}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {779C2568-C47B-4CDC-BD6A-BD01978A1F48}
+	EndGlobalSection
+EndGlobal

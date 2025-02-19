@@ -5,7 +5,7 @@ Desenvolvimento de uma simples API REST para controle de Fluxo de Caixa.
 
 ## Diagrama de solução:
 
-![Diagrama C4 Nível 2: Container](fluxoCaixa.drawio.png) <br><br>
+![Diagrama C4 Nível 2: Container](desenho-de-solucao-AWS.drawio.png) <br><br>
 
 
 ## Recursos

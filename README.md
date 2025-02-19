@@ -1,12 +1,16 @@
 
 # Desafio Fluxo de Caixa
 
-Desenvolvimento de uma simples API REST para controle de Fluxo de Caixa.
+Desenvolvimento de microserviço FluxoCaixa.
 
 ## Diagrama de solução:
 
-![Diagrama C4 Nível 2: Container](desenho-de-solucao-AWS.drawio.png) <br><br>
+![Desenho da solução](desenho-de-solucao-AWS.drawio.png) <br><br>
 
+
+## Documento de arquitetura:
+
+[Documento de arquitetura](dsa-fluxocaixa.pdf)<br><br>
 
 ## Recursos
 
@@ -30,7 +34,7 @@ Desenvolvimento de uma simples API REST para controle de Fluxo de Caixa.
 
 ## Tecnologias
 
-- .net 7
+- .net 9
 - Gerenciador de pacotes nuget
 - MySql 
 - Mongodb
@@ -61,7 +65,7 @@ Após concluído, acesse o swagger pelo seu navegador. <br>
 
 ## Swagger 
 
-Documentação da API REST: <br>
+Documentação da API REST (em desenvolvimento): <br>
 
 http://localhost:5001/swagger
 
@@ -132,8 +136,6 @@ $ dotnet test
 - Padronização de response para api;
 - Configurar interface de healthcheck para os endpoints configurados; 
 
-- Migrar mediatR 11.x to 12.x, requisito da versão .net 7
-https://github.com/jbogard/MediatR/wiki/Migration-Guide-11.x-to-12.0
 
 ## Licença
 
